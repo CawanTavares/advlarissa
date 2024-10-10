@@ -1,0 +1,378 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;700;900&family=Roboto:wght@100&display=swap');
+
+/* Estilos Gerais */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9; /* Cor de fundo suave */
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #aa723e; /* Cor similar ao fundo da segunda imagem */
+    padding: 10px 20px;
+}
+
+.logoSite {
+    height: 50px;
+}
+
+.atendimento-btn {
+    background-color: #c5ad97;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.atendimento-btn:hover {
+    background-color: #a68b72; /* Cor para hover */
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Seção Hero */
+.hero-section {
+    background-color: #b79b80; /* Cor de fundo da seção */
+    color: #ffffff; /* Cor do texto */
+    padding: 60px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.hero-section h1 {
+    font-size: 48px; /* Tamanho do título */
+    margin: 0; /* Remove margens */
+}
+
+.hero-section p {
+    font-size: 18px; /* Tamanho do parágrafo */
+    margin: 20px 0; /* Margem acima e abaixo */
+}
+
+.btn-primary {
+    background-color: #fff; /* Cor de fundo do botão */
+    color: #007bff; /* Cor do texto do botão */
+    padding: 12px 20px; /* Espaçamento interno do botão */
+    border: none; /* Remove bordas */
+    border-radius: 5px; /* Cantos arredondados */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Seção de Serviços */
+.services-section {
+    padding: 60px 20px; /* Espaçamento interno */
+    background-color: #ffffff; /* Cor de fundo da seção */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.services-section h2 {
+    font-size: 36px; /* Tamanho do título */
+    margin-bottom: 40px; /* Margem abaixo do título */
+}
+
+.service-item {
+    margin-bottom: 30px; /* Margem abaixo de cada item de serviço */
+}
+
+.service-item h3 {
+    font-size: 24px; /* Tamanho do subtítulo */
+}
+
+.service-item p {
+    font-size: 16px; /* Tamanho da descrição */
+    color: #666; /* Cor do texto */
+}
+
+/* Seção Sobre Nós */
+.about-section {
+    padding: 60px 20px; /* Espaçamento interno */
+    background-color: #f2f2f2; /* Cor de fundo da seção */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.about-section h2 {
+    font-size: 36px; /* Tamanho do título */
+    margin-bottom: 20px; /* Margem abaixo do título */
+}
+
+.about-section p {
+    font-size: 16px; /* Tamanho da descrição */
+    color: #666; /* Cor do texto */
+}
+
+/* Widget Divider */
+.widget-divider {
+    width: 155px;
+    margin: 0 auto;
+    border: 0;
+    border-top: 10px solid #fff!important;
+}
+
+/* Títulos de Especialização */
+.specialist-title {
+    font-size: 22px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.specialty-title {
+    font-size: 28px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.description {
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Botão CTA */
+.button-container {
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.elementor-button-cta {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #555555!important;
+    background-color: #fff!important;
+    padding: 13px 27px;
+    text-decoration: none;
+}
+
+.elementor-button-cta:hover {
+    color: #555555;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 20px 0; /* Espaçamento interno */
+}
+
+footer p {
+    margin: 0; /* Remove margens */
+}
+
+/* Responsividade */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px; /* Menor espaçamento na navbar em dispositivos móveis */
+    }
+
+    .logoSite {
+        height: 40px; /* Tamanho do logo em dispositivos móveis */
+    }
+
+    .atendimento-btn {
+        padding: 8px 15px; /* Espaçamento menor no botão de atendimento */
+        font-size: 14px; /* Fonte menor no botão */
+    }
+
+    .hero-section h1 {
+        font-size: 36px; /* Tamanho do título para dispositivos móveis */
+    }
+
+    .hero-section p {
+        font-size: 16px; /* Tamanho do parágrafo para dispositivos móveis */
+    }
+
+    .services-section h2,
+    .about-section h2 {
+        font-size: 28px; /* Tamanho do título para dispositivos móveis */
+    }
+
+    .service-item h3 {
+        font-size: 20px; /* Tamanho do subtítulo para dispositivos móveis */
+    }
+
+    .specialist-title {
+        font-size: 20px; /* Tamanho do título para dispositivos móveis */
+    }
+
+    .specialty-title {
+        font-size: 24px; /* Tamanho do título para dispositivos móveis */
+    }
+
+    .description {
+        font-size: 14px; /* Tamanho da descrição para dispositivos móveis */
+    }
+}
+
+/* Estilo para a seção informativa */
+.informative-section {
+    background: #ffffff; /* Cor de fundo da seção */
+    padding-top: 50px; /* Espaçamento superior */
+}
+
+/* Estilo para a imagem informativa */
+.informative-image {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+}
+
+/* Estilo para o contêiner das colunas */
+.btgrid .row {
+    display: flex; /* Usar flexbox para alinhar os itens */
+    align-items: flex-start; /* Alinhar itens ao topo */
+}
+
+/* Título sobre a advogada */
+.about-title {
+    font-size: 36px; /* Tamanho do título */
+    color: #000; /* Cor do texto */
+    margin-top: 50px; /* Remove margem superior */
+}
+
+/* Texto sobre a advogada */
+.about-text {
+    line-height: 1.5; /* Altura da linha para melhor legibilidade */
+    text-align: justify; /* Justifica o texto */
+    font-family: 'Open Sans', sans-serif; /* Fonte para o texto */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Botão de contato */
+.btn.btn-btn {
+    color: rgb(0, 0, 0); /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Cantos arredondados */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    display: inline-block; /* Exibe o botão como bloco inline */
+    margin-top: 20px; /* Espaçamento superior para o botão */
+    transition: transform 0.3s ease;
+}
+
+.btn.btn-btn:hover {
+    color: rgb(243, 243, 243);
+    background-color: #252627; /* Cor de fundo do botão ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o botão levemente */
+}
+
+/* CSS para definir o estado inicial dos elementos */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Posiciona o elemento um pouco abaixo */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Animação */
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0); /* Volta ao lugar original */
+}
+
+/* CSS para o estado inicial dos itens de serviço */
+.slide-in {
+    opacity: 0;
+    transform: translateX(-50px); /* Inicia fora da tela */
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+}
+
+.slide-in.show {
+    opacity: 1;
+    transform: translateX(0); /* Volta ao lugar original */
+}
+
+/* Estilo das colunas e cards */
+.fundo {
+    border: 1px solid #e8e8e8;
+    padding: 35px 15px;
+    min-height: 400px; /* altura mínima ajustada */
+    background-color: #ffffff;
+    transition: 0.5s ease all;
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.col {
+    flex: 1 1 0; /* faz com que todos os cards tenham a mesma altura */
+    max-width: 300px;
+}
+
+.fundo:hover {
+    background-color: #AD9B87;
+    color: #ffffff;
+    border-color: #AD9B87;
+}
+
+.fundo p {
+    color: #333333; /* Cor escura para garantir legibilidade sem hover */
+}
+
+.fundo:hover p, .fundo:hover strong {
+    color: #ffffff;
+}
+
+/* Ajuste do conteúdo */
+.fundo strong {
+    color: #333333;
+}
+
+.fundo img {
+    margin-bottom: 15px;
+}
+
+.btgrid .row {
+    margin-top: 15px;
+}
+
+.botaao {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+/* Estilos gerais para fontes e cores */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container_conteudo_informativo p {
+    text-align: center;
+    color: #000;
+    font-size: 36px;
+}
+
+.container_conteudo_informativo strong {
+    color: #000;
+}
+
+.row {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
