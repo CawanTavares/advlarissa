@@ -30,7 +30,7 @@ header {
     border-radius: 30px; /* Bordas arredondadas */
     font-size: 1.2rem; /* Tamanho da fonte do botão */
     text-transform: uppercase; /* Deixa o texto em letras maiúsculas */
-    margin-left: auto; /* Empurra o botão completamente para a direita */
+    margin-left: 1500px;
 }
 
 .container-fluid {
@@ -38,6 +38,7 @@ header {
     justify-content: space-between; /* Garante que a logo e o botão fiquem nas extremidades */
     align-items: center; /* Alinha os itens verticalmente no centro */
 }
+
 
 .container {
     max-width: 1200px;
