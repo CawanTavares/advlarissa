@@ -10,8 +10,33 @@ body {
 }
 
 header {
-    background-color: #f8f9fa;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #aa723e; /* Cor de fundo do header */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+    padding: 0px 0; /* Espaçamento no header */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logoSite {
+    max-width: 180px; /* Tamanho máximo da logo */
+    height: auto; /* Mantém a proporção da logo */
+}
+
+.atendimento-btn {
+    background-color: #ff6b6b; /* Cor de fundo do botão */
+    color: #aa723e; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border-radius: 30px; /* Bordas arredondadas */
+    font-size: 1.2rem; /* Tamanho da fonte do botão */
+    text-transform: uppercase; /* Deixa o texto em letras maiúsculas */
+    margin-left: auto; /* Empurra o botão completamente para a direita */
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between; /* Garante que a logo e o botão fiquem nas extremidades */
+    align-items: center; /* Alinha os itens verticalmente no centro */
 }
 
 .container {
@@ -20,11 +45,25 @@ header {
     padding: 20px;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    align-items: center; /* Alinha o conteúdo verticalmente */
+   /* justify-content: center; */
+}
+
 /* Navbar Styling */
 .navbar {
     background-color: #aa723e; /* Cor similar ao fundo da segunda imagem */
     padding: 10px 20px;
     padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between; /* Espaço entre a logo e o botão */
+    align-items: center; /* Alinha verticalmente no centro */
+    padding: 0 20px; /* Espaçamento nas laterais */
+    
 }
 
 .navbar-brand img {
@@ -188,8 +227,113 @@ footer p {
     margin: 0; /* Remove margens */
 }
 
+/* Estilo para a seção informativa */
+.informative-section {
+    background: #ffffff; /* Cor de fundo da seção */
+    padding-top: 50px; /* Espaçamento superior */
+}
+
+/* Estilo para a imagem informativa */
+.informative-image {
+    width: 100%; /* Faz a imagem ocupar 100% da coluna */
+    max-width: 350px; /* Limita a largura máxima da imagem */
+    height: auto;
+    margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+/* Estilo para o contêiner das colunas */
+.btgrid .row {
+    display: flex; /* Usar flexbox para alinhar os itens */
+    align-items: center; /* Alinha verticalmente a imagem e o texto no centro */
+    justify-content: space-between; /* Garante espaço adequado entre as colunas */
+    flex-wrap: wrap;
+}
+
+/* Título sobre a advogada */
+.about-title {
+    font-size: 36px; /* Tamanho do título */
+    color: #000; /* Cor do texto */
+    margin-top: 50px; /* Remove margem superior */
+}
+
+/* Texto sobre a advogada */
+.about-text {
+    line-height: 1.5; /* Altura da linha para melhor legibilidade */
+    text-align: justify; /* Justifica o texto */
+    font-family: 'Open Sans', sans-serif; /* Fonte para o texto */
+    font-size: 16px; /* Tamanho da fonte */
+    margin-top: 20px; /* Espaçamento entre parágrafos */
+}
+
+/* Botão de contato */
+.btn.btn-btn {
+    color: rgb(0, 0, 0); /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Cantos arredondados */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    display: inline-block; /* Exibe o botão como bloco inline */
+    margin-top: 20px; /* Espaçamento superior para o botão */
+    transition: transform 0.3s ease;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #252627;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Ajuste conforme necessário */
+}
+
+.btn.btn-btn:hover {
+    color: rgb(243, 243, 243);
+    background-color: #252627; /* Cor de fundo do botão ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o botão levemente */
+}
+
 /* Responsividade */
 @media only screen and (max-width: 768px) {
+    /* Ajuste para colunas em telas menores */
+
+    .logoSite {
+        max-width: 140px; /* Ajusta a logo para telas menores */
+    }
+
+    .atendimento-btn {
+        font-size: 1rem; /* Ajusta o tamanho da fonte do botão */
+        padding: 8px 15px; /* Ajusta o espaçamento do botão */
+    }
+
+    .content {
+        flex-direction: column; /* Empilha os elementos verticalmente em telas menores */
+    }
+
+    .informative-image {
+        margin-bottom: 20px; /* Espaçamento embaixo da imagem quando em empilhamento */
+        margin-right: 0;
+    }
+
+    .col-md-3 {
+        flex: 1 1 100%; /* Para telas pequenas, os cards ocupam 100% da largura */
+    }
+        .btgrid .row {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .btgrid .col {
+        max-width: 100%; /* Ocupa 100% da largura */
+        padding: 10px;
+    }
+
+    /* Navbar ajustes */
     .navbar {
         padding: 10px; /* Menor espaçamento na navbar em dispositivos móveis */
         flex-direction: column;
@@ -199,7 +343,6 @@ footer p {
     .navbar-brand img {
         height: 40px;
     }
-
 
     .logoSite {
         height: 40px; /* Tamanho do logo em dispositivos móveis */
@@ -239,231 +382,76 @@ footer p {
     .description {
         font-size: 14px; /* Tamanho da descrição para dispositivos móveis */
     }
+
+    /* Texto sobre a advogada */
+    .about-title {
+        font-size: 28px; /* Ajusta o tamanho do título */
+    }
+
+    .about-text {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
 }
 
-/* Estilo para a seção informativa */
-.informative-section {
-    background: #ffffff; /* Cor de fundo da seção */
-    padding-top: 50px; /* Espaçamento superior */
-}
+@media only screen and (max-width: 480px) {
+    /* Hero section */
+    .hero-section h1 {
+        font-size: 28px; /* Menor tamanho para títulos */
+    }
 
-/* Estilo para a imagem informativa */
-.informative-image {
-    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
-}
+    .hero-section p {
+        font-size: 14px; /* Menor tamanho para textos */
+    }
 
-/* Estilo para o contêiner das colunas */
-.btgrid .row {
-    display: flex; /* Usar flexbox para alinhar os itens */
-    align-items: flex-start; /* Alinhar itens ao topo */
-}
-
-/* Título sobre a advogada */
-.about-title {
-    font-size: 36px; /* Tamanho do título */
-    color: #000; /* Cor do texto */
-    margin-top: 50px; /* Remove margem superior */
-}
-
-/* Texto sobre a advogada */
-.about-text {
-    line-height: 1.5; /* Altura da linha para melhor legibilidade */
-    text-align: justify; /* Justifica o texto */
-    font-family: 'Open Sans', sans-serif; /* Fonte para o texto */
-    font-size: 16px; /* Tamanho da fonte */
-}
-
-/* Botão de contato */
-.btn.btn-btn {
-    color: rgb(0, 0, 0); /* Cor do texto do botão */
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    border-radius: 5px; /* Cantos arredondados */
-    text-decoration: none; /* Remove sublinhado */
-    font-size: 16px; /* Tamanho da fonte do botão */
-    display: inline-block; /* Exibe o botão como bloco inline */
-    margin-top: 20px; /* Espaçamento superior para o botão */
-    transition: transform 0.3s ease;
-}
-
-.btn.btn-btn:hover {
-    color: rgb(243, 243, 243);
-    background-color: #252627; /* Cor de fundo do botão ao passar o mouse */
-    transform: scale(1.05); /* Aumenta o botão levemente */
-}
-
-/* CSS para definir o estado inicial dos elementos */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px); /* Posiciona o elemento um pouco abaixo */
-    transition: opacity 1s ease-out, transform 1s ease-out; /* Animação */
-}
-
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0); /* Volta ao lugar original */
-}
-
-/* CSS para o estado inicial dos itens de serviço */
-.slide-in {
-    opacity: 0;
-    transform: translateX(-50px); /* Inicia fora da tela */
-    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
-}
-
-.slide-in.show {
-    opacity: 1;
-    transform: translateX(0); /* Volta ao lugar original */
-}
-
-/* Estilo das colunas e cards */
-.fundo {
-    border: 1px solid #e8e8e8;
-    padding: 35px 15px;
-    min-height: 400px; /* altura mínima ajustada */
-    background-color: #ffffff;
-    transition: 0.5s ease all;
-    position: relative;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.col {
-    flex: 1 1 0; /* faz com que todos os cards tenham a mesma altura */
-    max-width: 300px;
-}
-
-.fundo:hover {
-    background-color: #AD9B87;
-    color: #000000;
-    border-color: #AD9B87;
-}
-
-.fundo p {
-    color: #333333; /* Cor escura para garantir legibilidade sem hover */
-}
-
-.fundo:hover p, .fundo:hover strong {
-    color: #000000;
-}
-
-/* Ajuste do conteúdo */
-.fundo strong {
-    color: #333333;
-}
-
-.fundo img {
-    margin-bottom: 15px;
-}
-
-.btgrid .row {
-    margin-top: 15px;
-}
-
-.botaao {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-}
-
-/* Estilos gerais para fontes e cores */
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-.container_conteudo_informativo p {
-    text-align: center;
-    color: #000;
-    font-size: 36px;
-}
-
-.container_conteudo_informativo strong {
-    color: #000;
-}
-
-.row {
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.col {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    .btn-primary {
+        padding: 10px 15px; /* Ajuste do padding do botão */
+        font-size: 14px;
+    }
 }
 
 .card {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
     padding: 20px;
-    box-sizing: border-box;
+    background-color: #fff; /* Cor de fundo para o card */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-.btgrid .row {
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os cards */
 }
 
-.btgrid .col {
+.col-md-3 {
     display: flex;
+    flex: 1 1 300px; /* Garantir que as colunas tenham o mesmo tamanho mínimo e sejam responsivas */
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.col-md-6 {
     flex: 1;
-    max-width: 25%;
-    box-sizing: border-box;
-    padding: 10px;
 }
 
-.btgrid .content {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+img {
+    max-width: 100px;
+    height: auto;
+    margin: 0 auto;
 }
 
-.fab.fa-instagram {
-    font-size: 20px; /* ajusta o tamanho do ícone */
-    margin-right: 5px; /* adiciona um pequeno espaço entre o ícone e o texto */
+p {
+    text-align: center;
 }
 
-/* Animações */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
 
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
-}
 
-.slide-in {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
-}
-
-.slide-in.show {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.scale-up {
-    opacity: 0;
-    transform: scale(0.9);
-    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
-}
-
-.scale-up.show {
-    opacity: 1;
-    transform: scale(1);
-}
