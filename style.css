@@ -3,9 +3,15 @@
 
 /* Estilos Gerais */
 body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f9f9f9; /* Cor de fundo suave */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .container {
@@ -18,6 +24,12 @@ body {
 .navbar {
     background-color: #aa723e; /* Cor similar ao fundo da segunda imagem */
     padding: 10px 20px;
+    padding: 1rem 2rem;
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: auto;
 }
 
 .logoSite {
@@ -25,16 +37,16 @@ body {
 }
 
 .atendimento-btn {
-    background-color: #c5ad97;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
+    background-color: #b79b80;
+    color: #fff;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
     text-decoration: none;
-    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 .atendimento-btn:hover {
-    background-color: #a68b72; /* Cor para hover */
+    background-color: #000000; /* Cor para hover */
 }
 
 .container-fluid {
@@ -180,7 +192,14 @@ footer p {
 @media only screen and (max-width: 768px) {
     .navbar {
         padding: 10px; /* Menor espaçamento na navbar em dispositivos móveis */
+        flex-direction: column;
+        align-items: center;
     }
+
+    .navbar-brand img {
+        height: 40px;
+    }
+
 
     .logoSite {
         height: 40px; /* Tamanho do logo em dispositivos móveis */
@@ -189,6 +208,7 @@ footer p {
     .atendimento-btn {
         padding: 8px 15px; /* Espaçamento menor no botão de atendimento */
         font-size: 14px; /* Fonte menor no botão */
+        margin-top: 1rem;
     }
 
     .hero-section h1 {
@@ -316,7 +336,7 @@ footer p {
 
 .fundo:hover {
     background-color: #AD9B87;
-    color: #ffffff;
+    color: #000000;
     border-color: #AD9B87;
 }
 
@@ -325,7 +345,7 @@ footer p {
 }
 
 .fundo:hover p, .fundo:hover strong {
-    color: #ffffff;
+    color: #000000;
 }
 
 /* Ajuste do conteúdo */
@@ -375,4 +395,41 @@ body {
     flex-direction: column;
 }
 
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
 
+.btgrid .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btgrid .col {
+    display: flex;
+    flex: 1;
+    max-width: 25%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.btgrid .content {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fab.fa-instagram {
+    font-size: 20px; /* ajusta o tamanho do ícone */
+    margin-right: 5px; /* adiciona um pequeno espaço entre o ícone e o texto */
+}
