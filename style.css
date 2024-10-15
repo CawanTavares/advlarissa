@@ -150,7 +150,7 @@ header {
 /* Seção Sobre Nós */
 .about-section {
     padding: 60px 20px; /* Espaçamento interno */
-    background-color: #f2f2f2; /* Cor de fundo da seção */
+    background-color: #b19a5c; /* Cor de fundo da seção */
     text-align: center; /* Centraliza o conteúdo */
 }
 
@@ -229,7 +229,7 @@ footer p {
 
 /* Estilo para a seção informativa */
 .informative-section {
-    background: #ffffff; /* Cor de fundo da seção */
+    background: #050404; /* Cor de fundo da seção */
     padding-top: 50px; /* Espaçamento superior */
 }
 
