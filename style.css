@@ -433,3 +433,37 @@ body {
     font-size: 20px; /* ajusta o tamanho do ícone */
     margin-right: 5px; /* adiciona um pequeno espaço entre o ícone e o texto */
 }
+
+/* Animações */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+}
+
+.slide-in.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scale-up {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+}
+
+.scale-up.show {
+    opacity: 1;
+    transform: scale(1);
+}

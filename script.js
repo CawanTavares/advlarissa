@@ -10,7 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Função para adicionar a classe 'show' quando o elemento entra na viewport
 function handleScrollAnimations() {
-    const elements = document.querySelectorAll('.fade-in');
+    const elements = document.querySelectorAll('.fade-in, .slide-in, .scale-up');
     elements.forEach(el => {
         const position = el.getBoundingClientRect();
         // Verifica se o elemento está dentro da janela de visualização
@@ -46,3 +46,22 @@ window.addEventListener('scroll', handleSlideInAnimations);
 
 // Chama a função ao carregar a página
 document.addEventListener('DOMContentLoaded', handleSlideInAnimations);
+
+// Função para a animação de escala para os itens de serviço
+function handleScaleUpAnimations() {
+    const elements = document.querySelectorAll('.scale-up');
+    elements.forEach(el => {
+        const position = el.getBoundingClientRect();
+        if (position.top <= window.innerHeight && position.bottom >= 0) {
+            el.classList.add('show');
+        } else {
+            el.classList.remove('show');
+        }
+    });
+}
+
+// Ativar animação no scroll
+window.addEventListener('scroll', handleScaleUpAnimations);
+
+// Chama a função ao carregar a página
+document.addEventListener('DOMContentLoaded', handleScaleUpAnimations);
