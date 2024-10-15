@@ -1,4 +1,4 @@
-/* Importação de fontes */
+/* Importação de fontes */ 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;700;900&family=Roboto:wght@100&display=swap');
 
 /* Estilos Gerais */
@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: #aa723e; /* Cor de fundo do header */
+    background-color: #1e2226; /* Cor de fundo do header */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
     padding: 0px 0; /* Espaçamento no header */
     position: fixed;
@@ -24,8 +24,8 @@ header {
 }
 
 .atendimento-btn {
-    background-color: #ff6b6b; /* Cor de fundo do botão */
-    color: #aa723e; /* Cor do texto do botão */
+    background-color: #04080c; /* Cor de fundo do botão */
+    color: #1e2226; /* Cor do texto do botão */
     padding: 10px 20px; /* Espaçamento interno do botão */
     border-radius: 30px; /* Bordas arredondadas */
     font-size: 1.2rem; /* Tamanho da fonte do botão */
@@ -38,7 +38,6 @@ header {
     justify-content: space-between; /* Garante que a logo e o botão fiquem nas extremidades */
     align-items: center; /* Alinha os itens verticalmente no centro */
 }
-
 
 .container {
     max-width: 1200px;
@@ -57,7 +56,7 @@ header {
 
 /* Navbar Styling */
 .navbar {
-    background-color: #aa723e; /* Cor similar ao fundo da segunda imagem */
+    background-color: #22262b; /* Cor similar ao fundo da segunda imagem */
     padding: 10px 20px;
     padding: 1rem 2rem;
     display: flex;
@@ -77,7 +76,7 @@ header {
 }
 
 .atendimento-btn {
-    background-color: #b79b80;
+    background-color: #1e2226;
     color: #fff;
     border-radius: 50px;
     padding: 0.5rem 1.5rem;
@@ -97,7 +96,7 @@ header {
 
 /* Seção Hero */
 .hero-section {
-    background-color: #b79b80; /* Cor de fundo da seção */
+    background-color: #1e2226; /* Cor de fundo da seção */
     color: #ffffff; /* Cor do texto */
     padding: 60px 20px; /* Espaçamento interno */
     text-align: center; /* Centraliza o conteúdo */
@@ -114,8 +113,8 @@ header {
 }
 
 .btn-primary {
-    background-color: #fff; /* Cor de fundo do botão */
-    color: #007bff; /* Cor do texto do botão */
+    background-color: #f5f5f5; /* Cor de fundo do botão */
+    color: #1e2226; /* Cor do texto do botão */
     padding: 12px 20px; /* Espaçamento interno do botão */
     border: none; /* Remove bordas */
     border-radius: 5px; /* Cantos arredondados */
@@ -218,8 +217,8 @@ header {
 
 /* Rodapé */
 footer {
-    background-color: #333; /* Cor de fundo do rodapé */
-    color: #fff; /* Cor do texto */
+    background-color: #22262b; /* Cor de fundo do rodapé */
+    color: #ffffff; /* Cor do texto */
     text-align: center; /* Centraliza o conteúdo */
     padding: 20px 0; /* Espaçamento interno */
 }
