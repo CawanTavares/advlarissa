@@ -309,8 +309,10 @@ footer p {
 
 /* Responsividade */
 @media only screen and (max-width: 768px) {
-    .logoSite {
-        max-width: 140px; /* Ajusta a logo para telas menores */
+    .logo {
+        max-width: 100%;         /* A imagem nunca será maior que o container */
+        height: auto;            /* Mantém a proporção da imagem */
+        display: block;          /* Remove qualquer espaço ao redor da imagem */ 
     }
 
     .atendimento-btn {
