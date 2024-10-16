@@ -13,29 +13,36 @@
 </head>
 
 <body>
-    <!-- Cabeçalho / Header -->
     <header>
-        <nav class="navbar fixed-top align-items-center justify-content-between">
-            <div class="container-fluid d-flex align-items-center justify-content-between">
-                <a href="index.html" class="navbar-brand">
-                    <img src="./assets/img/logo_advlarissa.png" alt="Logo" class="logoSite">
-                </a>
-                <a class="btn btn-rounded atendimento-btn" href="https://api.whatsapp.com/send?phone=5584987488701">Solicite um Atendimento</a>
-            </div>
+        <!-- Logo -->
+        <div class="logo">
+          <img src="./assets/img/logo_advlarissa.png" alt="Logo" class="logo">
+        </div>
+    
+        <!-- Menu de Navegação -->
+        <nav>
+          <ul>
+            <li><a href="#especialidade">Especialidade</a></li>
+            <li><a href="#sobre-mim">Sobre Mim</a></li>
+            <li><a href="#servicos">Serviços Ofertados</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
         </nav>
-    </header>
+    
+        <!-- Botão de Solicitação de Atendimento -->
+        <!--<button class="btn-solicitar" href="https://api.whatsapp.com/send?phone=5584987488701">Solicitar Atendimento</button>-->
+      </header>
 </body>
 
 
     <!-- Corpo / Main Content -->
     <main>
-        <section id="hero" class="hero-section">
+        <section id="especialidade" class="hero-section"> <!-- Aqui adiciona o ID 'especialidade' -->
             <div class="container">
-            
                 <div class="elementor-heading-title specialist-title">ESPECIALISTA EM</div>
             
                 <div class="elementor-heading-title specialty-title">DIREITO DE FAMÍLIA</div>
-
+    
                 <div class="elementor-heading-title specialty-title">E SUCESSÕES</div>
                 <div class="elementor-heading-title description">
                     Estamos preparados para te ajudar,<br>
@@ -43,13 +50,12 @@
                 </div>
             
                 <div class="button-container">
-                    <a class="elementor-button-cta" href="https://api.whatsapp.com/send?phone=5584987488701" role="button">SOLICITE UM ATENDIMENTO</a>
+                    <a class="elementor-button-cta" href="https://api.whatsapp.com/send?phone=5584987488701">Quero falar com a advogada!</a>
                 </div>
             </div>
-            
         </section>
 
-        <section id="containerEditavel-71803" class="fade-in" class="informative-section">
+        <section id="sobre-mim" class="fade-in" class="informative-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 TextoConteudoEditavel" style="display:none;"></div>
@@ -109,7 +115,7 @@
         </div>
     </section>
 
-        <section id="containerEditavel-72346" style="background: #1e2226; padding-top:30px; padding-bottom:30px;">
+        <section id="servicos" style="background: #1e2226; padding-top:30px; padding-bottom:30px;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 TextoConteudoEditavel" style="display:none;"></div>
@@ -136,7 +142,7 @@
                     <img src="https://www.cache2net3.com//Repositorio/3665/Conteudos/14156/0e70c17c-8.png"><br><br>
                     <strong><span style="font-size:18px;">Divórcios e Separações</span></strong>
                 </p>
-                <div style="line-height: 1.2;">
+                <div style="line-height: 1.4;">
                     <span style="font-size:12px;">- Acompanhamento jurídico para divórcios consensuais e litigiosos; </span><br>
                     <span style="font-size:12px;">- Orientação sobre a divisão de bens; </span><br>
                     <span style="font-size:12px;">- Assessoria em processos de separação judicial; </span><br>
@@ -185,7 +191,7 @@
                     <img src="https://www.cache2net3.com//Repositorio/3665/Conteudos/14156/0e70c17c-8.png"><br>
                     <strong><span style="font-size:18px;">Inventários e Partilhas</span></strong>
                 </p>
-                <div style="line-height: 1.2; text-align: left;">
+                <div style="line-height: 1.4; text-align: left;">
                     <span style="font-size:12px;">- Assessoria para a abertura de inventário judicial e extrajudicial;</span><br>
                     <span style="font-size:12px;">- Orientação sobre partilha de bens e herança;</span><br>
                     <span style="font-size:12px;">- Regularização de bens imóveis no inventário;</span><br>
@@ -219,31 +225,27 @@
                 </div>
             </div>
         </section>        
-        
-        
-<!--
-        <section id="servicos" class="services-section">
-            <div  class="container">
-                <h2>Nossos Serviços</h2>
-                <div class="slide-in service-item">
-                    <h3>Serviço 1</h3>
-                    <p>Descrição do serviço 1.</p>
-                </div>
-                <div class="slide-in service-item">
-                    <h3>Serviço 2</h3>
-                    <p>Descrição do serviço 2.</p>
-                </div>
-                 Adicione mais serviços conforme necessário -->
-         <!--   </div>
-        </section>
+        <div id="contato" class="container">
+            <h1 style="text-align: center;">Precisa de ajuda com o seu caso?</h1>
+            <p>Fale com nossa equipe e nos informe como podemos te ajudar.</p>
+    
+            <form id="contactForm" action="submit.php" method="post">
+                <label for="nome">NOME <span style="color: red;">*</span></label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+    
+                <label for="email">E-MAIL <span style="color: red;">*</span></label>
+                <input type="email" id="email" name="email" placeholder="seuemail@email.com.br" required>
+    
+                <label for="telefone">TELEFONE <span style="color: red;">*</span></label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(00) 90000-0000" required>
+    
+                <label for="mensagem">MENSAGEM <span style="color: red;">*</span></label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva o seu caso" required></textarea>
 
-        <section id="sobre" class="about-section">
-            <div class="container">
-                <h2>Sobre Nós</h2>
-                <p>Informações sobre a empresa, missão e valores.</p>
-            </div>
-        </section>
-    -->
+                <div class="btn-container" style="text-align: center;">
+                    <a href="mailto:seuemail@dominio.com" class="btn btn-email">ENVIAR MENSAGEM</a>
+                </div>
+            </form>
     </main>
 
     <!-- Rodapé / Footer -->
