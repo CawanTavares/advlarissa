@@ -3,41 +3,64 @@
 
 /* Estilos Gerais */
 body {
-    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Estilo do Header */
+  header {
+    background-color: #1e2226;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Estilo da Logo */
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+
+  /* Estilo do Menu */
+  nav ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-header {
-    background-color: #1e2226; /* Cor de fundo do header */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
-    padding: 0px 0; /* Espaçamento no header */
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-}
-
-.logoSite {
-    max-width: 180px; /* Tamanho máximo da logo */
-    height: auto; /* Mantém a proporção da logo */
-}
-
-.atendimento-btn {
-    background-color: #04080c; /* Cor de fundo do botão */
-    color: #1e2226; /* Cor do texto do botão */
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    border-radius: 30px; /* Bordas arredondadas */
-    font-size: 1.2rem; /* Tamanho da fonte do botão */
-    text-transform: uppercase; /* Deixa o texto em letras maiúsculas */
-    margin-left: 1500px;
-}
-
-.container-fluid {
     display: flex;
-    justify-content: space-between; /* Garante que a logo e o botão fiquem nas extremidades */
-    align-items: center; /* Alinha os itens verticalmente no centro */
-}
+    gap: 20px;
+  }
+
+  nav ul li {
+    display: inline;
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  nav ul li a:hover {
+    background-color: #333;
+    border-radius: 4px;
+  }
+
+  /* Estilo do Botão */
+  .btn-solicitar {
+    background-color: #ffffff;
+    color: #1e2226;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .btn-solicitar:hover {
+    background-color: #496480;
+  }
 
 .container {
     max-width: 1200px;
@@ -453,5 +476,88 @@ p {
     text-align: center;
 }
 
+form {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+}
 
+.btn-email {
+    background-color: #a9802e;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666666;
+}
+label {
+    font-weight: bold;
+    color: #333333;
+    display: block;
+    margin: 15px 0 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #999999;
+}
+
+.required {
+    color: red;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-whatsapp {
+    background-color: #25d366;
+}
+
+.btn-email {
+    display: block;
+    margin: 20px auto; /* Alinha horizontalmente o botão */
+    background-color: #b28a47;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
 
