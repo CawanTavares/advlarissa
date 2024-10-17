@@ -28,11 +28,56 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Função para verificar se todos os campos obrigatórios estão preenchidos
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    const form = this;
-    if (!form.checkValidity()) {
-        e.preventDefault(); // Impede o envio se os campos não forem válidos
-        alert('Por favor, preencha todos os campos obrigatórios.');
+// Função para aplicar a máscara no campo de telefone em tempo real
+function applyPhoneMask(input) {
+    let value = input.value;
+
+    // Remove qualquer caractere que não seja número
+    value = value.replace(/\D/g, '');
+
+    // Aplica a máscara com espaço após o DDD e hífen no número
+    if (value.length > 2 && value.length <= 6) {
+        value = value.replace(/^(\d{2})(\d{1,4})/, "$1 $2");
+    } else if (value.length > 6) {
+        value = value.replace(/^(\d{2})(\d{5})(\d{0,4})/, "$1 $2-$3");
     }
+
+    // Atualiza o valor do campo com a máscara
+    input.value = value;
+}
+
+// Função para validar o formulário e abrir o cliente de e-mail com os dados preenchidos
+document.getElementById("sendEmail").addEventListener("click", function(event) {
+    event.preventDefault(); // Previne o redirecionamento padrão do link
+
+    // Obtenção dos valores dos campos
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+
+    // Selecionar o elemento da mensagem de erro
+    const errorMessage = document.getElementById("errorMessage");
+
+    // Expressão regular para validar o telefone no formato DDD + TELEFONE
+    const phonePattern = /^\d{2}\s\d{4,5}-\d{4}$/;
+
+    // Verificação de campos vazios
+    if (name === "" || email === "" || phone === "" || message === "") {
+        errorMessage.textContent = "Todos os campos devem ser preenchidos!";
+        return false; // Prevenção do envio do formulário
+    }
+
+    // Validação do telefone
+    if (!phonePattern.test(phone)) {
+        errorMessage.textContent = "O telefone deve estar no formato DDD + Número (Ex: 11 98765-4321)";
+        return false; // Prevenção do envio do formulário
+    }
+
+    // Se tudo estiver correto, abrir o cliente de e-mail com o conteúdo preenchido
+    errorMessage.textContent = ""; // Limpar mensagem de erro
+    const mailtoLink = `mailto:seuemail@dominio.com?subject=Contato&body=Nome: ${name}%0D%0AE-mail: ${email}%0D%0ATelefone: ${phone}%0D%0AMensagem: ${message}`;
+    window.location.href = mailtoLink;
+
+    return true;
 });
