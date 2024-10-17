@@ -14,11 +14,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Permite quebrar o menu em dispositivos menores */
+    /*flex-wrap: wrap; Permite quebrar o menu em dispositivos menores */
 }
 
 .logo {
-    width: 120px;
+    width: 1200px;
     height: auto;
 }
 
