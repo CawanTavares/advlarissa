@@ -46,6 +46,29 @@ function applyPhoneMask(input) {
     input.value = value;
 }
 
+// Função para exibir o pop-up de erro no centro da tela
+function showModal(message) {
+    const modal = document.getElementById("errorModal");
+    const modalMessage = document.getElementById("modalMessage");
+    
+    modalMessage.textContent = message;
+    modal.style.display = "block";
+}
+
+// Função para fechar o modal ao clicar no "X"
+document.getElementById("closeModal").addEventListener("click", function() {
+    const modal = document.getElementById("errorModal");
+    modal.style.display = "none";
+});
+
+// Fechar o modal se o usuário clicar fora da caixa de conteúdo
+window.onclick = function(event) {
+    const modal = document.getElementById("errorModal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 // Função para validar o formulário e abrir o cliente de e-mail com os dados preenchidos
 document.getElementById("sendEmail").addEventListener("click", function(event) {
     event.preventDefault(); // Previne o redirecionamento padrão do link
@@ -56,26 +79,22 @@ document.getElementById("sendEmail").addEventListener("click", function(event) {
     const phone = document.getElementById("phone").value;
     const message = document.getElementById("message").value;
 
-    // Selecionar o elemento da mensagem de erro
-    const errorMessage = document.getElementById("errorMessage");
-
     // Expressão regular para validar o telefone no formato DDD + TELEFONE
     const phonePattern = /^\d{2}\s\d{4,5}-\d{4}$/;
 
     // Verificação de campos vazios
     if (name === "" || email === "" || phone === "" || message === "") {
-        errorMessage.textContent = "Todos os campos devem ser preenchidos!";
+        showModal("Todos os campos devem ser preenchidos!"); // Exibe o modal com a mensagem
         return false; // Prevenção do envio do formulário
     }
 
     // Validação do telefone
     if (!phonePattern.test(phone)) {
-        errorMessage.textContent = "O telefone deve estar no formato DDD + Número (Ex: 11 98765-4321)";
+        showModal("O telefone deve estar no formato DDD + Número (Ex: 11 98765-4321)");
         return false; // Prevenção do envio do formulário
     }
 
     // Se tudo estiver correto, abrir o cliente de e-mail com o conteúdo preenchido
-    errorMessage.textContent = ""; // Limpar mensagem de erro
     const mailtoLink = `mailto:seuemail@dominio.com?subject=Contato&body=Nome: ${name}%0D%0AE-mail: ${email}%0D%0ATelefone: ${phone}%0D%0AMensagem: ${message}`;
     window.location.href = mailtoLink;
 
