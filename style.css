@@ -403,6 +403,14 @@ input, textarea {
     margin-top: 15px;
 }
 
+#especialidade {
+    background-image: url('./assets/img/divorcio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+}
+
 
 
 
