@@ -303,10 +303,110 @@ footer p {
 
 .btn.btn-btn:hover {
     color: rgb(243, 243, 243);
-    background-color: #252627; /* Cor de fundo do botão ao passar o mouse */
+    background-color: #2e353b; /* Cor de fundo do botão ao passar o mouse */
     transform: scale(1.05); /* Aumenta o botão levemente */
 }
 
+.processo-container {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #eeeeee;
+}
+
+.processo-container h1 {
+    font-size: 2.5em;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.processo-container p {
+    font-size: 1.1em;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.processo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.processo-item {
+    background-color: #2e353b;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.processo-item h2 {
+    font-size: 1.5em;
+    color: #e6b800;
+    margin-bottom: 15px;
+}
+
+.processo-item p {
+    font-size: 1em;
+    color: #ccc;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    color: #2e353b;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%; /* Ocupar 100% da largura disponível */
+    box-sizing: border-box; /* Inclui padding na largura */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; /* Limita a largura máxima */
+    box-sizing: border-box;
+}
+
+label, input, textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que padding e bordas estejam incluídos na largura */
+}
+
+.btn-container {
+    text-align: center;
+}
+
+#sendEmail {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #b28a47;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+
+
+/* #b28a47 */
 /* Responsividade */
 @media only screen and (max-width: 768px) {
     .logo {
@@ -415,6 +515,10 @@ footer p {
         width: 100%; /* O botão ocupa toda a largura no mobile */
         text-align: center;
         margin-top: 15px;
+    }
+
+    .processo-grid {
+        grid-template-columns: 1fr;
     }
 }
 
