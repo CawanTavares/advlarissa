@@ -14,7 +14,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*flex-wrap: wrap; Permite quebrar o menu em dispositivos menores */
 }
 
 .logo {
@@ -27,8 +26,8 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 15px; /* Diminui o espaço entre os itens no mobile */
-    flex-wrap: wrap; /* Permite o ajuste em telas pequenas */
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -56,7 +55,7 @@ nav ul li a:hover {
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
-    margin-top: 10px; /* Dá espaço no mobile para o botão */
+    margin-top: 10px;
 }
 
 .btn-solicitar:hover {
@@ -75,16 +74,16 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: flex-start;
     height: 100%;
-    align-items: center; /* Alinha o conteúdo verticalmente */
+    align-items: center;
 }
 
 /* Navbar Styling */
 .navbar {
-    background-color: #22262b; /* Cor similar ao fundo da segunda imagem */
+    background-color: #22262b;
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between; /* Espaço entre a logo e o botão */
-    align-items: center; /* Alinha verticalmente no centro */
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar-brand img {
@@ -106,7 +105,7 @@ nav ul li a:hover {
 }
 
 .atendimento-btn:hover {
-    background-color: #000000; /* Cor para hover */
+    background-color: #000000;
 }
 
 .container-fluid {
@@ -117,72 +116,72 @@ nav ul li a:hover {
 
 /* Seção Hero */
 .hero-section {
-    background-color: #1e2226; /* Cor de fundo da seção */
-    color: #ffffff; /* Cor do texto */
-    padding: 60px 20px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o conteúdo */
+    background-color: #1e2226;
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .hero-section h1 {
-    font-size: 48px; /* Tamanho do título */
-    margin: 0; /* Remove margens */
+    font-size: 48px;
+    margin: 0;
 }
 
 .hero-section p {
-    font-size: 18px; /* Tamanho do parágrafo */
-    margin: 20px 0; /* Margem acima e abaixo */
+    font-size: 18px;
+    margin: 20px 0;
 }
 
 .btn-primary {
-    background-color: #f5f5f5; /* Cor de fundo do botão */
-    color: #1e2226; /* Cor do texto do botão */
-    padding: 12px 20px; /* Espaçamento interno do botão */
-    border: none; /* Remove bordas */
-    border-radius: 5px; /* Cantos arredondados */
-    text-decoration: none; /* Remove sublinhado */
-    font-weight: bold; /* Texto em negrito */
+    background-color: #f5f5f5;
+    color: #1e2226;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* Seção de Serviços */
 .services-section {
-    padding: 60px 20px; /* Espaçamento interno */
-    background-color: #ffffff; /* Cor de fundo da seção */
-    text-align: center; /* Centraliza o conteúdo */
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
 }
 
 .services-section h2 {
-    font-size: 36px; /* Tamanho do título */
-    margin-bottom: 40px; /* Margem abaixo do título */
+    font-size: 36px;
+    margin-bottom: 40px;
 }
 
 .service-item {
-    margin-bottom: 30px; /* Margem abaixo de cada item de serviço */
+    margin-bottom: 30px;
 }
 
 .service-item h3 {
-    font-size: 24px; /* Tamanho do subtítulo */
+    font-size: 24px;
 }
 
 .service-item p {
-    font-size: 16px; /* Tamanho da descrição */
-    color: #666; /* Cor do texto */
+    font-size: 16px;
+    color: #666;
 }
 
 /* Seção Sobre Nós */
 .about-section {
-    padding: 60px 20px; /* Espaçamento interno */
-    background-color: #b19a5c; /* Cor de fundo da seção */
-    text-align: center; /* Centraliza o conteúdo */
+    padding: 60px 20px;
+    background-color: #b19a5c;
+    text-align: center;
 }
 
 .about-section h2 {
-    font-size: 36px; /* Tamanho do título */
-    margin-bottom: 20px; /* Margem abaixo do título */
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 .about-section p {
-    font-size: 16px; /* Tamanho da descrição */
-    color: #666; /* Cor do texto */
+    font-size: 16px;
+    color: #666;
 }
 
 /* Widget Divider */
@@ -238,63 +237,63 @@ nav ul li a:hover {
 
 /* Rodapé */
 footer {
-    background-color: #22262b; /* Cor de fundo do rodapé */
-    color: #ffffff; /* Cor do texto */
-    text-align: center; /* Centraliza o conteúdo */
-    padding: 20px 0; /* Espaçamento interno */
+    background-color: #22262b;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
 }
 
 footer p {
-    margin: 0; /* Remove margens */
+    margin: 0;
 }
 
 /* Estilo para a seção informativa */
 .informative-section {
-    background: #050404; /* Cor de fundo da seção */
-    padding-top: 50px; /* Espaçamento superior */
+    background: #fff;
+    padding-top: 50px;
 }
 
 /* Estilo para a imagem informativa */
 .informative-image {
-    width: 100%; /* Faz a imagem ocupar 100% da coluna */
-    max-width: 350px; /* Limita a largura máxima da imagem */
+    width: 100%;
+    max-width: 350px;
     height: auto;
-    margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+    margin-right: 20px;
 }
 
 /* Estilo para o contêiner das colunas */
 .btgrid .row {
-    display: flex; /* Usar flexbox para alinhar os itens */
-    align-items: center; /* Alinha verticalmente a imagem e o texto no centro */
-    justify-content: space-between; /* Garante espaço adequado entre as colunas */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 /* Título sobre a advogada */
 .about-title {
-    font-size: 36px; /* Tamanho do título */
-    color: #000; /* Cor do texto */
-    margin-top: 50px; /* Remove margem superior */
+    font-size: 36px;
+    color: #000;
+    margin-top: 50px;
 }
 
 /* Texto sobre a advogada */
 .about-text {
-    line-height: 1.5; /* Altura da linha para melhor legibilidade */
-    text-align: justify; /* Justifica o texto */
-    font-family: 'Open Sans', sans-serif; /* Fonte para o texto */
-    font-size: 16px; /* Tamanho da fonte */
-    margin-top: 20px; /* Espaçamento entre parágrafos */
+    line-height: 1.5;
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
 }
 
 /* Botão de contato */
 .btn.btn-btn {
-    color: rgb(0, 0, 0); /* Cor do texto do botão */
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    border-radius: 5px; /* Cantos arredondados */
-    text-decoration: none; /* Remove sublinhado */
-    font-size: 16px; /* Tamanho da fonte do botão */
-    display: inline-block; /* Exibe o botão como bloco inline */
-    margin-top: 20px; /* Espaçamento superior para o botão */
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 20px;
     transition: transform 0.3s ease;
     background-color: #252627;
     color: #ffffff;
@@ -303,10 +302,11 @@ footer p {
 
 .btn.btn-btn:hover {
     color: rgb(243, 243, 243);
-    background-color: #2e353b; /* Cor de fundo do botão ao passar o mouse */
-    transform: scale(1.05); /* Aumenta o botão levemente */
+    background-color: #2e353b;
+    transform: scale(1.05);
 }
 
+/* Seção de Processo */
 .processo-container {
     text-align: center;
     padding: 50px 20px;
@@ -351,6 +351,7 @@ footer p {
     color: #ccc;
 }
 
+/* Formulário de Contato */
 .form-container {
     display: flex;
     flex-direction: column;
@@ -403,7 +404,7 @@ input, textarea {
     margin-top: 15px;
 }
 
-
+/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -438,6 +439,7 @@ input, textarea {
     cursor: pointer;
 }
 
+/* Seção Especialidade */
 #especialidade {
     background-image: url('./assets/img/divorcio.jpg');
     background-size: cover;
@@ -446,48 +448,44 @@ input, textarea {
     align-items: center;
 }
 
-
-
-
-/* #b28a47 */
 /* Responsividade */
 @media only screen and (max-width: 768px) {
     .logo {
-        max-width: 100%;         /* A imagem nunca será maior que o container */
-        height: auto;            /* Mantém a proporção da imagem */
-        display: block;          /* Remove qualquer espaço ao redor da imagem */ 
+        max-width: 100%;
+        height: auto;
+        display: block;
     }
 
     .atendimento-btn {
-        font-size: 1rem; /* Ajusta o tamanho da fonte do botão */
-        padding: 8px 15px; /* Ajusta o espaçamento do botão */
+        font-size: 1rem;
+        padding: 8px 15px;
     }
 
     .content {
-        flex-direction: column; /* Empilha os elementos verticalmente em telas menores */
+        flex-direction: column;
     }
 
     .informative-image {
-        margin-bottom: 20px; /* Espaçamento embaixo da imagem quando em empilhamento */
+        margin-bottom: 20px;
         margin-right: 0;
     }
 
     .col-md-3 {
-        flex: 1 1 100%; /* Para telas pequenas, os cards ocupam 100% da largura */
+        flex: 1 1 100%;
     }
 
     .btgrid .row {
-        flex-direction: column; /* Empilha os itens verticalmente */
-        align-items: center; /* Centraliza os itens */
+        flex-direction: column;
+        align-items: center;
     }
 
     .btgrid .col {
-        max-width: 100%; /* Ocupa 100% da largura */
+        max-width: 100%;
         padding: 10px;
     }
 
     .navbar {
-        padding: 10px; /* Menor espaçamento na navbar em dispositivos móveis */
+        padding: 10px;
         flex-direction: column;
         align-items: center;
     }
@@ -497,65 +495,65 @@ input, textarea {
     }
 
     .logoSite {
-        height: 40px; /* Tamanho do logo em dispositivos móveis */
+        height: 40px;
     }
 
     .atendimento-btn {
-        padding: 8px 15px; /* Espaçamento menor no botão de atendimento */
-        font-size: 14px; /* Fonte menor no botão */
+        padding: 8px 15px;
+        font-size: 14px;
         margin-top: 1rem;
     }
 
     .hero-section h1 {
-        font-size: 36px; /* Tamanho do título para dispositivos móveis */
+        font-size: 36px;
     }
 
     .hero-section p {
-        font-size: 16px; /* Tamanho do parágrafo para dispositivos móveis */
+        font-size: 16px;
     }
 
     .services-section h2,
     .about-section h2 {
-        font-size: 28px; /* Tamanho do título para dispositivos móveis */
+        font-size: 28px;
     }
 
     .service-item h3 {
-        font-size: 20px; /* Tamanho do subtítulo para dispositivos móveis */
+        font-size: 20px;
     }
 
     .specialist-title {
-        font-size: 20px; /* Tamanho do título para dispositivos móveis */
+        font-size: 20px;
     }
 
     .specialty-title {
-        font-size: 24px; /* Tamanho do título para dispositivos móveis */
+        font-size: 24px;
     }
 
     .description {
-        font-size: 14px; /* Tamanho da descrição para dispositivos móveis */
+        font-size: 14px;
     }
 
     .about-title {
-        font-size: 28px; /* Ajusta o tamanho do título */
+        font-size: 28px;
     }
 
     .about-text {
-        font-size: 14px; /* Reduz o tamanho da fonte */
+        font-size: 14px;
     }
 
     nav ul {
-        justify-content: center; /* Centraliza o menu no mobile */
+        justify-content: center;
         width: 100%;
         margin-bottom: 10px;
     }
 
     .logo {
         margin-bottom: 10px;
-        width: 100px; /* Ajusta o tamanho da logo */
+        width: 100px;
     }
 
     .btn-solicitar {
-        width: 100%; /* O botão ocupa toda a largura no mobile */
+        width: 100%;
         text-align: center;
         margin-top: 15px;
     }
@@ -567,26 +565,27 @@ input, textarea {
 
 @media only screen and (max-width: 480px) {
     .hero-section h1 {
-        font-size: 28px; /* Menor tamanho para títulos */
+        font-size: 28px;
     }
 
     .hero-section p {
-        font-size: 14px; /* Menor tamanho para textos */
+        font-size: 14px;
     }
 
     .btn-primary {
-        padding: 10px 15px; /* Ajuste do padding do botão */
+        padding: 10px 15px;
         font-size: 14px;
     }
 }
 
+/* Card */
 .card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
     padding: 20px;
-    background-color: #fff; /* Cor de fundo para o card */
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
@@ -600,12 +599,12 @@ input, textarea {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Espaçamento entre os cards */
+    gap: 20px;
 }
 
 .col-md-3 {
     display: flex;
-    flex: 1 1 300px; /* Garantir que as colunas tenham o mesmo tamanho mínimo e sejam responsivas */
+    flex: 1 1 300px;
     max-width: 300px;
     margin-bottom: 20px;
 }
@@ -681,7 +680,7 @@ input::placeholder, textarea::placeholder {
 
 .btn-email {
     display: block;
-    margin: 20px auto; /* Alinha horizontalmente o botão */
+    margin: 20px auto;
     background-color: #b28a47;
     border: none;
     color: white;
@@ -706,14 +705,14 @@ input::placeholder, textarea::placeholder {
 
 /* Estilo do modal (pop-up) */
 .modal {
-    display: none; /* Oculto por padrão */
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5); /* Fundo escuro com opacidade */
+    background-color: rgba(0,0,0,0.5);
 }
 
 .modal-content {

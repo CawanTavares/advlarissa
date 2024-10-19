@@ -85,4 +85,3 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         alert("Ocorreu um erro ao enviar o e-mail: " + JSON.stringify(error));
     });
 });
-
