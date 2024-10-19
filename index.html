@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"> </script>
+        <script type="text/javascript">
+            (function(){
+            emailjs.init({
+            publicKey: "Mf7MxPwBkS2gzIPKZ",
+                });
+            })();
+        </script>
 </head>
 
 <body>
@@ -297,13 +305,23 @@
                         <textarea id="message" name="message" placeholder="Digite sua mensagem"></textarea>
                 
                         <div class="btn-container">
-                            <a href="#" id="sendEmail" class="btn btn-email">ENVIAR MENSAGEM</a>
+                            <button type="submit" id="sendEmail" class="btn btn-email">ENVIAR MENSAGEM</button>
                         </div>
                     </form>
                     <p id="errorMessage" class="error-message"></p>
                 </div>
             </div>
         </div>
+        
+        
+        <!-- Modal de Erro -->
+        <div id="errorModal" class="modal">
+            <div class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+                <p id="modalMessage"></p>
+            </div>
+        </div>
+
     <!-- Modal Pop-up -->
     <div id="errorModal" class="modal">
         <div class="modal-content">

@@ -28,50 +28,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Carregar o SDK mais recente do EmailJS
+(function() {
+    emailjs.init("Mf7MxPwBkS2gzIPKZ"); // Substitua pela sua chave pública
+})();
+
 // Função para aplicar a máscara no campo de telefone em tempo real
 function applyPhoneMask(input) {
     let value = input.value;
-
-    // Remove qualquer caractere que não seja número
-    value = value.replace(/\D/g, '');
-
-    // Aplica a máscara com espaço após o DDD e hífen no número
+    value = value.replace(/\D/g, '');  // Remove qualquer caractere que não seja número
     if (value.length > 2 && value.length <= 6) {
         value = value.replace(/^(\d{2})(\d{1,4})/, "$1 $2");
     } else if (value.length > 6) {
         value = value.replace(/^(\d{2})(\d{5})(\d{0,4})/, "$1 $2-$3");
     }
-
-    // Atualiza o valor do campo com a máscara
     input.value = value;
 }
 
-// Função para exibir o pop-up de erro no centro da tela
-function showModal(message) {
-    const modal = document.getElementById("errorModal");
-    const modalMessage = document.getElementById("modalMessage");
-    
-    modalMessage.textContent = message;
-    modal.style.display = "block";
-}
-
-// Função para fechar o modal ao clicar no "X"
-document.getElementById("closeModal").addEventListener("click", function() {
-    const modal = document.getElementById("errorModal");
-    modal.style.display = "none";
-});
-
-// Fechar o modal se o usuário clicar fora da caixa de conteúdo
-window.onclick = function(event) {
-    const modal = document.getElementById("errorModal");
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-// Função para validar o formulário e abrir o cliente de e-mail com os dados preenchidos
-document.getElementById("sendEmail").addEventListener("click", function(event) {
-    event.preventDefault(); // Previne o redirecionamento padrão do link
+// Função para validar e enviar o formulário
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();  // Evitar o envio padrão do formulário
 
     // Obtenção dos valores dos campos
     const name = document.getElementById("name").value;
@@ -82,21 +58,31 @@ document.getElementById("sendEmail").addEventListener("click", function(event) {
     // Expressão regular para validar o telefone no formato DDD + TELEFONE
     const phonePattern = /^\d{2}\s\d{4,5}-\d{4}$/;
 
-    // Verificação de campos vazios
+    // Validação dos campos
     if (name === "" || email === "" || phone === "" || message === "") {
-        showModal("Todos os campos devem ser preenchidos!"); // Exibe o modal com a mensagem
-        return false; // Prevenção do envio do formulário
+        alert("Todos os campos devem ser preenchidos!");
+        return;
     }
 
-    // Validação do telefone
     if (!phonePattern.test(phone)) {
-        showModal("O telefone deve estar no formato DDD + Número (Ex: 11 98765-4321)");
-        return false; // Prevenção do envio do formulário
+        alert("O telefone deve estar no formato DDD + Número (Ex: 11 98765-4321)");
+        return;
     }
 
-    // Se tudo estiver correto, abrir o cliente de e-mail com o conteúdo preenchido
-    const mailtoLink = `mailto:seuemail@dominio.com?subject=Contato&body=Nome: ${name}%0D%0AE-mail: ${email}%0D%0ATelefone: ${phone}%0D%0AMensagem: ${message}`;
-    window.location.href = mailtoLink;
+    // Parâmetros do e-mail
+    const templateParams = {
+        from_name: name,
+        from_email: email,
+        message: message,
+        phone: phone
+    };
 
-    return true;
+    // Enviando o e-mail usando EmailJS com a versão mais recente do SDK
+    emailjs.send("service_se9517z", "template_mmr0m8i", templateParams)
+    .then(function(response) {
+        alert("E-mail enviado com sucesso!");
+    }, function(error) {
+        alert("Ocorreu um erro ao enviar o e-mail: " + JSON.stringify(error));
+    });
 });
+
